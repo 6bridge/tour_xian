@@ -1,0 +1,66 @@
+.map-container {
+    height: 600px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: none;
+    border-radius: 8px;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+#recommendations {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.attraction-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.attraction-item:hover {
+    background-color: #f8f9fa;
+}
+
+.attraction-item h6 {
+    margin-bottom: 5px;
+}
+
+.attraction-item p {
+    margin-bottom: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.crowd-level {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+
+.crowd-level.low {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.crowd-level.medium {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.crowd-level.high {
+    background-color: #f8d7da;
+    color: #721c24;
+} 

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#c41230">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>西安五一旅游指南 - 避开人流的完美攻略</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #c41230;
+            --secondary-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1509896318455-153467a12329?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 40px 0;
+            }
+            
+            .timeline-item {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .card {
+                margin-bottom: 15px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .weather-card {
+                padding: 15px;
+            }
+            
+            .col-md-3 {
+                margin-bottom: 15px;
+            }
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            padding: 20px;
+            border-left: 2px solid var(--primary-color);
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 24px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--primary-color);
+        }
+
+        .weather-card {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .tip-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <div class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">西安五一旅游指南</h1>
+            <p class="lead">避开人流 · 探索古都 · 品味文化</p>
+        </div>
+    </div>
+
+    <!-- 主要内容区 -->
+    <div class="container">
+        <!-- 天气预报 -->
+        <section class="mb-5">
+            <h2 class="section-title">天气提醒</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="weather-card">
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <i class="bi bi-cloud-sun fs-1"></i>
+                                <h5 class="mt-2">温度适中</h5>
+                                <p>建议携带薄外套</p>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <div class="col-md-3 text-center">
+                                        <h6>4月6日</h6>
+                                        <p>小雨转阴<br>9°C / 0°C</p>
+                                    </div>
+                                    <div class="col-md-3 text-center">
+                                        <h6>4月7日</h6>
+                                        <p>小雨<br>13°C / 2°C</p>
+                                    </div>
+                                    <div class="col-md-3 text-center">
+                                        <h6>4月8日</h6>
+                                        <p>阴转多云<br>11°C / 2°C</p>
+                                    </div>
+                                    <div class="col-md-3 text-center">
+                                        <h6>4月9日</h6>
+                                        <p>多云<br>18°C / 2°C</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行程安排 -->
+        <section class="mb-5">
+            <h2 class="section-title">精心规划的行程</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>第一天：城墙-钟楼片区</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-sunrise"></i> 早上 6:30-9:00</h5>
+                            <p>西安城墙晨间游</p>
+                            <ul>
+                                <li>建议从南门上城墙</li>
+                                <li>可以骑自行车环城</li>
+                                <li>早晨人少，温度适宜，视野最佳</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-sun"></i> 上午 9:30-11:30</h5>
+                            <p>钟楼-鼓楼区域</p>
+                            <ul>
+                                <li>避开正午人流高峰</li>
+                                <li>参观钟楼博物馆</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-brightness-high"></i> 下午 14:00-16:00</h5>
+                            <p>大明宫国家遗址公园</p>
+                            <ul>
+                                <li>选择工作日下午参观，人流较少</li>
+                                <li>园区面积大，易分散人流</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-moon-stars"></i> 傍晚 17:30后</h5>
+                            <p>大唐不夜城</p>
+                            <ul>
+                                <li>傍晚到达，避开人流高峰</li>
+                                <li>享受夜景和灯光秀</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>第二天：兵马俑-华清池片区</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-sunrise"></i> 早上 7:30出发</h5>
+                            <p>兵马俑博物馆</p>
+                            <ul>
+                                <li>建议最早批次入场，避开旅游团</li>
+                                <li>从1号坑开始参观，逆向游览</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-brightness-high"></i> 下午 14:00-16:00</h5>
+                            <p>华清池</p>
+                            <ul>
+                                <li>选择午后参观，游客较少</li>
+                                <li>可以在园内休息避开人流高峰</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>第三天：小众景点路线</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-sunrise"></i> 上午</h5>
+                            <p>汉城湖旅游风景区</p>
+                            <ul>
+                                <li>相对冷门，但景色优美</li>
+                                <li>适合清晨漫步</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5><i class="bi bi-brightness-high"></i> 下午</h5>
+                            <p>文景公园或城市运动公园</p>
+                            <ul>
+                                <li>远离市中心，游客较少</li>
+                                <li>体验本地生活氛围</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 实用建议 -->
+        <section class="mb-5">
+            <h2 class="section-title">避开人流的实用建议</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-clock tip-icon"></i>
+                            <h5 class="card-title">时间选择</h5>
+                            <ul class="list-unstyled">
+                                <li>景点早晨开门或傍晚闭园前参观</li>
+                                <li>错峰用餐，避开12:00-13:00</li>
+                                <li>避开18:00-19:00晚餐高峰</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-train-front tip-icon"></i>
+                            <h5 class="card-title">交通建议</h5>
+                            <ul class="list-unstyled">
+                                <li>多利用地铁</li>
+                                <li>避开地面交通拥堵</li>
+                                <li>景点间建议打车或专车</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-cup-hot tip-icon"></i>
+                            <h5 class="card-title">餐饮建议</h5>
+                            <ul class="list-unstyled">
+                                <li>回民街建议早上9点前</li>
+                                <li>或下午3点后前往</li>
+                                <li>选择小众餐馆就餐</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-ticket-perforated tip-icon"></i>
+                            <h5 class="card-title">预约建议</h5>
+                            <ul class="list-unstyled">
+                                <li>提前在网上预约门票</li>
+                                <li>错峰入园</li>
+                                <li>避开团队游客高峰期</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 住宿建议 -->
+        <section class="mb-5">
+            <h2 class="section-title">住宿建议</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-house-door"></i> 市区游玩</h5>
+                            <p class="card-text">建议住在城墙内靠近钟楼或南门附近，方便游览市区景点，晚上可以步行到大唐不夜城。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-house"></i> 兵马俑游玩</h5>
+                            <p class="card-text">如果要参观兵马俑，建议临潼区住宿一晚，可以避开交通高峰，早起先人一步游览。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 西安旅游指南 - 让您的旅行更轻松愉快</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
